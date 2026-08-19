@@ -1,0 +1,33 @@
+//cp.c
+#include<unistd.h>
+#include<fcntl.h>
+#include<stdio.h>
+#include<sys/stat.h>
+#include<stdlib.h>
+
+int main (int argc ,char const* argv[])
+{
+    if(argc!=3)
+    {
+        perror("参数不足");
+        return 1;
+    }
+    int fd_in,fd_out;
+    //源
+    fd_in=open(argv[1],O_RDONLY);
+    //目标
+    fd_out=open(argv[2],O_WRONLY |O_CREAT,0660);
+    char buf[1024];
+    char ch;
+    while(  read(fd_in,&ch,sizeof(ch))>0)
+    {
+        write(fd_out,&ch,1);
+  
+    }
+    printf("ok\n");
+    close(fd_in);
+    close(fd_out);
+  
+
+    return 0 ;
+}

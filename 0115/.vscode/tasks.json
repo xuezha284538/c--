@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "编译运行 pro.c",
+            "type": "shell",
+            "command": "gcc pro.c -o pro && ./pro",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "编译运行 day.c",
+            "type": "shell",
+            "command": "gcc day.c -o day && ./day",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "编译运行 fib2.c",
+            "type": "shell",
+            "command": "gcc fib2.c -o fib2 && ./fib2",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "编译运行 diif2.c",
+            "type": "shell",
+            "command": "gcc diif2.c -o diif2 && ./diif2",
+            "group": "none",
+            "problemMatcher": []
+        }
+    ]
+}

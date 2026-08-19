@@ -1,0 +1,70 @@
+<html>
+<html lang = "zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title> project </title>
+</head>
+
+<body>
+    <h1>project</h1>
+    <style>
+        /*css 级联样式表 定义样式和布局
+        */
+        h1
+        { 
+            text-align: center;
+            font-weight:normal;
+            color: rgb(3, 0, 10);
+            background-color: rgb(255, 255, 255);
+        }
+        img{
+            border-radius: 50px;
+            border: 2px solid rgb(0, 255, 242);
+        }
+        video
+        {
+            border-radius: 50px;
+            border: 3px rgb(255, 106, 0) solid;
+        }
+ 
+        /* 每个"图片+文字"或"音频+文字"的组合容器 */
+        .item {
+            display: flex;/*弹性布局*/
+            flex-direction: column;  /* 纵向排列：上面的元素在上，下面的在下 */
+            align-items: center;     /* 关键：让文字水平居中对齐到图片正下方 */
+            margin: 20px auto;       /* 上下间距 + 整体水平居中 */
+        }
+    </style>
+
+
+<div class="item">
+    <img src="fan.png" width="100px" height="100px" alt="风扇图片">
+    <a href="fan.png">风扇</a>
+</div>
+
+<div class="item">
+    <img src="jidianqi.png" width="100px" height="100px" alt="继电器图片">
+    <a href="jidianqi.png">继电器</a>
+</div>
+
+<div class="item">
+    <img src="http.png" width="200" height="300">
+    <a href="HTTP.pdf">图解HTTP</a>
+</div>
+
+<div class="item">
+    <p>演示视频</p>
+    <video src="123.mp4" controls width="300px" height="300px">演示视频</video>
+</div>
+
+<div class="item">
+    <p>音频</p>
+    <audio src="1.mp3" controls>音频</audio>
+</div>
+
+<div class="item">
+    <a href="next.html">下一页</a>
+</div>
+</body>
+
+</html>

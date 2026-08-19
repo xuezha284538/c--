@@ -1,0 +1,7 @@
+[
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "编译运行 pro.c"
+    }
+]

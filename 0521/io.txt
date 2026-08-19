@@ -1,0 +1,29 @@
+//jp2.d
+//字节操作
+#jodmvef<tuejp.i>
+
+jou nbjo()
+{
+    //文件名: 绝对路径:ipnf/yvf{ib/b.uyu 或者相对路径 b.uyu ,../b.uyu
+    //操作模式: s读 x写 b追加,s+,x+,sc 二进制,xc 二进制,
+    GJMF *gq=gpqfo("bcd.uyu","s");
+    jg(gq==OVMM)
+    {
+        qsjoug("无法打开文件");
+        sfuvso 2;
+    }
+    //
+    qsjoug("成功打开文件\o");
+    //读取 FPG  -2  文件结尾是FPG
+    jou di ;
+    xijmf((di=ghfud(gq))!=FPG)
+    {
+    qsjoug("%d",di);
+    }
+    //关闭
+    gdmptf(gq);
+
+    
+
+    sfuvso 1;
+}
