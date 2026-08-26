@@ -20,7 +20,7 @@ message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
 # Declare the executable target built from your sources
-add_executable(i im2.cxx)
+add_executable(i im3.cxx)
 
 # Link your application with OpenCV libraries
 target_link_libraries(i PRIVATE ${OpenCV_LIBS})
