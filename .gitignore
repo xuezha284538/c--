@@ -9,6 +9,13 @@
 *.stdout
 *.log
 
+# CMake 编译产物
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+build/
+
 # 测试输出
 *.txt_2
 a.txt
