@@ -22,11 +22,24 @@ int main(int argc, char const *argv[])
     //     return -1;
     // }
 
-    rectangle(m1, Rect(244, 244, 50, 50), Scalar(0, 0, 0), 2);
-    rectangle(m1, Rect(310, 249, 50, 50), Scalar(0, 0, 0), 2);
-    circle(m1, Point(317, 317), 15, Scalar(0, 0, 255), -1);
-    putText(m1, "2026/8/26", Point(m1.rows / 2 - 50, 20), FONT_HERSHEY_COMPLEX_SMALL, 1, Scalar(255, 255, 255));
-    imshow("m1", m1);
+    // rectangle(m1, Rect(244, 244, 50, 50), Scalar(0, 0, 0), 2);
+    // rectangle(m1, Rect(310, 249, 50, 50), Scalar(0, 0, 0), 2);
+    // circle(m1, Point(317, 317), 15, Scalar(0, 0, 255), -1);
+    // putText(m1, "2026/8/26", Point(m1.rows / 2 - 50, 20), FONT_HERSHEY_COMPLEX_SMALL, 1, Scalar(255, 255, 255));
+
+    Mat mask(m1.size(), m1.type());
+    mask.setTo(Scalar(0, 22, 22));
+    Mat light,dark;
+    subtract(m1,mask,dark);
+    add(m1,mask,light);
+
+    imshow("1",m1);
+    imshow("2",mask);
+    imshow("3",dark);
+    imshow("4",light);
+    
+    waitKey(0); // 等待按键，否则窗口不刷新
+    // imshow("m1", m1);
     //     //裁剪一块区域
     //     Rect r(0,0,m1.rows/3,m1.cols/3);
     //     //poi
