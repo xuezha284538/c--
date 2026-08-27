@@ -15,7 +15,12 @@ int main(int argc, char const *argv[])
     Mat m2(Size(400,400),CV_8UC1);
     m2.setTo(Scalar(200));
 
-    cout<<m1<<endl;
+    cout<<m1.size()<<endl;
+    cout<<m1.rows<<endl;
+    cout<<m1.cols<<endl;
+    cout<<m1.type()<<endl;
+    cout<<m1.channels()<<endl;
+    cout<<m1.total()<<endl;
     //写到文件中保存
     imwrite("m2.png",m2);
    // imshow("m1.png",m1);

@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Define project name
-project(image)
+project(video)
 
 # Find OpenCV, you may need to set OpenCV_DIR variable
 # to the absolute path to the directory containing OpenCVConfig.cmake file
@@ -20,7 +20,7 @@ message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
 # Declare the executable target built from your sources
-add_executable(i im.cxx)
+add_executable(v vd2.cxx)
 
 # Link your application with OpenCV libraries
-target_link_libraries(i PRIVATE ${OpenCV_LIBS})
+target_link_libraries(v PRIVATE ${OpenCV_LIBS})

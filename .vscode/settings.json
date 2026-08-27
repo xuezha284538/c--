@@ -1,4 +1,4 @@
 {
-    "C_Cpp.errorSquiggles": "disabled",
-    "cmake.sourceDirectory": "/home/xuezha/c语言/0826"
+    "cmake.sourceDirectory": "${workspaceFolder}/0827",
+    "cmake.configureOnOpen": true
 }
