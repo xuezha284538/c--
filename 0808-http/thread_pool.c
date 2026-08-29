@@ -9,6 +9,7 @@
 #include <time.h>
 #include <sys/socket.h>
 #include <netinet/tcp.h>
+#include <bits/time.h>
 
 // 注意：g_cfg 在 main.c 中是结构体全局变量(非指针)，故这里用 . 访问
 extern ServerConfig g_cfg;

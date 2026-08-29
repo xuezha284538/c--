@@ -11,6 +11,7 @@
 #include <signal.h>
 #include <sys/epoll.h>
 #include <errno.h>
+#include <asm-generic/socket.h>
 
 ServerConfig g_cfg;
 LogContext *g_log = NULL;
