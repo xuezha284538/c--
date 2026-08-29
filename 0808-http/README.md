@@ -104,6 +104,4 @@ gcc -o http_server main.c config.c thread_pool.c http_util.c log.c -lpthread
 - [x] 异步日志,业务线程不阻塞 IO
 - [x] ET 边沿触发 + 非阻塞 IO
 
-## License
 
-MIT
