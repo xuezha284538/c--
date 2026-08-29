@@ -1,0 +1,19 @@
+# build
+build/
+*.o
+*.obj
+*.so
+*.a
+*.out
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.user
+
+# Qt
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.pro.user
