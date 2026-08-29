@@ -1,26 +1,17 @@
-# cmake needs this line
 cmake_minimum_required(VERSION 3.10)
-
-# Define project name
 project(video)
 
-# Find OpenCV, you may need to set OpenCV_DIR variable
-# to the absolute path to the directory containing OpenCVConfig.cmake file
-# via the command line or GUI
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 find_package(OpenCV REQUIRED)
 
-# If the package has been found, several variables will
-# be set, you can find the full list with descriptions
-# in the OpenCVConfig.cmake file.a
-# Print some message showing some of them
-message(STATUS "OpenCV library status:")
-message(STATUS "    config: ${OpenCV_DIR}")
-message(STATUS "    version: ${OpenCV_VERSION}")
-message(STATUS "    libraries: ${OpenCV_LIBS}")
-message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
+message(STATUS "OpenCV version: ${OpenCV_VERSION}")
 
-# Declare the executable target built from your sources
+# 运动检测系统 (帧差法/MOG2 + 多线程 + 录制)
+add_executable(motion_detect motion_detect.cpp)
+target_link_libraries(motion_detect PRIVATE ${OpenCV_LIBS})
+
+# 条码检测 (示例)
 add_executable(f barcode.cpp)
-
-# Link your application with OpenCV libraries
 target_link_libraries(f PRIVATE ${OpenCV_LIBS})
